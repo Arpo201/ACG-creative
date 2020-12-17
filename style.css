@@ -9,6 +9,10 @@ h3 {
   font-weight: bolder;
 }
 
+.mt-6 {
+  margin-top: 6rem !important;
+}
+
 .nav-link {
   color: #aaaaaa;
 }
