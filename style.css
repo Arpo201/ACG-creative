@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bolder;
+}
+
+.nav-link {
+  color: #aaaaaa;
+}
+.nav-link:hover {
+  color: #555;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.box {
+  width: 280px;
+  height: 280px;
+  background-color: #ddd;
+  margin: auto;
+  transition: 0.5s;
+}
+.box:hover {
+  background-color: rgb(59, 159, 252);
+}
+
+@media (min-width: 1200px) {
+}
