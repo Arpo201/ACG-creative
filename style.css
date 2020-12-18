@@ -7,6 +7,7 @@
 
 .navbar {
   background-color: rgb(255, 232, 232);
+  box-shadow: 0px 1px 5px #be6b6b;
 }
 
 .nav-link {
@@ -24,6 +25,14 @@
   cursor: pointer;
   transition: all 0.3s;
 }
+.navbar-nav .nav-link {
+  padding: 10px 20px;
+}
+
+#navbarToggler {
+  background-color: rgb(255, 248, 248);
+}
+
 #tog-1,
 #tog-2 {
   height: 1px;
@@ -37,21 +46,13 @@
 .show1 {
   transform: rotate(45deg) translateY(5.5px);
 }
-
 .show2 {
   transform: rotate(-45deg) translateY(-5.5px);
 }
 .navbar-toggler:focus {
   box-shadow: none !important;
 }
-.navbar-light .navbar-toggler {
-  border: none;
-}
 /* ------------------------------------------------------ */
-
-/* #navbarToggler {
-  background-color: gray;
-} */
 
 .d-less-lg {
   display: none;
