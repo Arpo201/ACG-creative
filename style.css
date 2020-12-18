@@ -5,6 +5,17 @@
   font-weight: bold;
 }
 
+.navbar {
+  background-color: rgb(255, 232, 232);
+}
+
+.nav-link {
+  color: rgba(43, 43, 43, 0.7);
+}
+.nav-link:hover {
+  color: rgb(26, 26, 26);
+}
+
 /* navbar show data onclick button in phone mode */
 .nav-icon {
   padding-top: 10px;
@@ -52,13 +63,6 @@ h3 {
 
 .mt-6 {
   margin-top: 6rem !important;
-}
-
-.nav-link {
-  color: #aaaaaa;
-}
-.nav-link:hover {
-  color: #555;
 }
 
 .container {
