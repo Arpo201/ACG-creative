@@ -7,29 +7,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
   </head>
 <body>
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="nav-link" href="#">ABOUT</a>
-          <a class="navbar-brand m-0 p-0" href="#">
-            <img height="60" src="images/logo.png" alt="">
-          </a>
-          <a class="nav-link" href="#">CONTACT</a>
-          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <div class="container justify-content-around">
+          <button class="navbar-toggler" onclick="toggle()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <div class="nav-icon">
+              <div class="bar" id="tog-1"></div>
+              <div class="bar" id="tog-2"></div>
+            </div>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-            </ul>
-          </div> -->
+
+          <a class="nav-link d-more-lg" href="#">ABOUT</a>
+          <a class="navbar-brand m-0 p-0" href="#">
+            <img height="60" src="images/acgLogo.png" alt="">
+          </a>
+          <a class="nav-link d-more-lg" href="#">CONTACT</a>
+
+          <div class="d-less-lg">
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            </div>
+          </div>
+
+
         </div>
       </nav>
 
@@ -74,7 +84,13 @@
 
           <div class="row justify-content-around">
             <div class="col-md-4 mt-4">
-              <div class="box"></div>
+              <div class="box">
+                <p>
+                  Hi <br>
+                  I'm Jud <br>
+                  Adisornpankul
+                </p>
+              </div>
             </div>
             <div class="col-md-4 mt-4">
               <div class="box"></div>
