@@ -96,3 +96,36 @@ h3 {
     display: contents;
   }
 }
+
+/* contact */
+#topic {
+  width: 100%;
+  height: 50px;
+  display: inline;
+}
+
+#contactForm * {
+  border: solid 2.5px rgb(124, 124, 124);
+  width: 100%;
+  padding: 0 15px;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#data {
+  height: 150px;
+}
+
+#submit {
+  border: solid 2.5px rgb(199, 23, 23);
+  color: white;
+  background-color: rgb(226, 49, 49);
+  opacity: 0.8;
+}
+#submit:hover {
+  opacity: 1;
+}
+
+.text-red {
+  color: rgb(255, 30, 30);
+}
