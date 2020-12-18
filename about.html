@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <div class="container justify-content-around">
+            <button class="navbar-toggler" onclick="toggle()" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <div class="nav-icon">
+                    <div class="bar" id="tog-1"></div>
+                    <div class="bar" id="tog-2"></div>
+                </div>
+            </button>
+
+            <div class="nav-link d-more-lg">
+                <div class="d-inline-block">
+                    <a class="text-decoration-none text-dark pe-lg-2" href="#">
+                        ABOUT &mdash; ACG CREATIVE
+                    </a>
+                </div>
+                <div class="d-inline-block nav-link">
+                    <a class="text-danger text-decoration-none" href="#">A</a><a class="text-decoration-none text-reset"
+                        href="#">FTER</a>
+                    <a class="text-danger text-decoration-none" href="#">C</a><a class="text-decoration-none text-reset"
+                        href="#">LASS</a>
+                    <a class="text-danger text-decoration-none" href="#">G</a><a class="text-decoration-none text-reset"
+                        href="#">ANG</a>
+                </div>
+            </div>
+            <a class="navbar-brand d-less-lg my-0 p-0" href="#">
+                <img height="60" src="images/acgLogo.png" alt="">
+            </a>
+            <a class="nav-link d-more-lg" href="#">CONTACT</a>
+
+            <div class="d-less-lg">
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </li>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</body>
