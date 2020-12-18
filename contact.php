@@ -60,11 +60,11 @@
               <p class="text-red">< คลิกหัวข้อที่ต้องการ</p>
             </div>
 
-            <form action="" onsubmit="getData()" id="contactForm">
+            <form action="contact.php" method="POST" id="contactForm">
               <input type="text" id="name" name="name" placeholder="ชื่อ">
               <input class="mt-3" type="text" id="mail" name="mail" placeholder="อีเมล">
               <input class="mt-3" type="text" id="phoneNum" name="phoneNum" placeholder="เบอร์โทรติดต่อ">
-              <textarea class="mt-3" id="data" name="comment" form="contactForm" placeholder="ข้อมูลเบื้องต้นของ PROJECT ที่ต้องการรับบริการ"></textarea>
+              <textarea class="mt-3" id="content" name="content" form="contactForm" placeholder="ข้อมูลเบื้องต้นของ PROJECT ที่ต้องการรับบริการ"></textarea>
               <input class="btn" id="submit" name="submit" type="submit" value="ส่งข้อมูล">
             </form>
         </div>
@@ -74,3 +74,29 @@
 </body>
 
 </html>
+
+<?php
+              
+    if(isset($_POST['submit'])){
+        date_default_timezone_set("Asia/Bangkok");
+        $data = $_POST['name'];
+
+        $name = $_POST['name'];
+        $mail = $_POST['mail'];
+        $phone = $_POST['phoneNum'];
+        $content = $_POST['content'];
+
+        $info = "";
+        $info = $info.date("d/m/Y H:i:s")."\n";
+        $info = $info."Name: $name\n";
+        $info = $info."Mail: $mail\n";
+        $info = $info."Phone number: $phone\n";
+        $info = $info."Content: $content\n\n\n";
+
+
+        $fp = fopen('data.txt', 'a');
+
+        fwrite($fp, $info);
+        fclose($fp);
+    }
+?>
