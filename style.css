@@ -58,6 +58,10 @@
   display: none;
 }
 
+.br-phone {
+  display: none;
+}
+
 h3 {
   font-weight: bolder;
 }
@@ -86,15 +90,6 @@ h3 {
 .box:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(59, 159, 252);
-}
-
-@media (max-width: 991px) {
-  .d-more-lg {
-    display: none;
-  }
-  .d-less-lg {
-    display: contents;
-  }
 }
 
 /* contact */
@@ -126,6 +121,38 @@ h3 {
   opacity: 1;
 }
 
+.text-head {
+  color: rgb(206, 0, 0);
+  font-weight: bolder;
+}
 .text-red {
-  color: rgb(255, 30, 30);
+  color: rgb(243, 35, 35);
+}
+
+hr {
+  height: 3px !important;
+  background-color: black;
+  opacity: 0.5;
+}
+.lastcon {
+  line-height: 2rem;
+}
+
+@media (max-width: 991px) {
+  .d-more-lg {
+    display: none;
+  }
+  .d-less-lg {
+    display: contents;
+  }
+  .lastcon {
+    font-size: 13px !important;
+    line-height: 1.5rem;
+  }
+  .br-com {
+    display: none;
+  }
+  .br-phone {
+    display: contents;
+  }
 }
