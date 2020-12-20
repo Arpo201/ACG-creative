@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer required</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .time{
+        font-size: 10px;
+        color: rgb(155, 155, 155);
+    }
+</style>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg pb-0">
+        <div class="container justify-content-around">
+          <button class="navbar-toggler" onclick="toggle()" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <div class="nav-icon">
+              <div class="bar" id="tog-1"></div>
+              <div class="bar" id="tog-2"></div>
+            </div>
+          </button>
+    
+          <a class="nav-link d-more-lg" href="about.html">ABOUT</a>
+          <a class="navbar-brand m-0 p-0" href="index.html">
+            <img height="60" src="images/acgLogo.png" alt="">
+          </a>
+          <a class="nav-link d-more-lg" href="contact.html">CONTACT</a>
+    
+        </div>
+    
+        <div class="d-less-lg">
+          <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container">
+          <div class="row justify-content-center" id="info">
+              <div class="col-8 mt-3">
+                  <div class="card">
+                      <div class="card-header">ฉัตร อดิศร <span class="time">20/12/2020 23:36:20</span></div>
+                      <div class="card-body">
+                        <p class="card-text">
+                            &nbsp;&nbsp;&nbsp;&nbsp;สวัสดีผมต้องการให้คุณทำงานงุงิงุงิบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลาบลา
+                            <br>
+                            <b>Call: </b> 0851234567 <br>
+                            <b>Email: </b> Jud@gmail.com <br>
+                        </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</body>
+</html>
+
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyCr7Wk2oJa7qBJ20xgUk5PWwWDkHNHK2A8",
+        authDomain: "test-6e854.firebaseapp.com",
+        databaseURL: "https://test-6e854-default-rtdb.firebaseio.com",
+        projectId: "test-6e854",
+        storageBucket: "test-6e854.appspot.com",
+        messagingSenderId: "767489462538",
+        appId: "1:767489462538:web:715d5803b1c46d1663eaf3",
+        measurementId: "G-QRC42L1597"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    let myFirebase = firebase.database();
+    let dataRef = myFirebase.ref('/contact');
+    
+
+    dataRef.limitToLast(5).on("child_added", function(childSnapshot){
+        let item = childSnapshot.val()
+        let text = "";
+        text = "";
+        text += "<div class='col-8 mt-3'>";
+        text += "<div class='card'>";
+        text += "<div class='card-header'>"+ item.name +" <span class='time'>" + item.time + "</span></div>";
+        text += "<div class='card-body'>";
+        text += "<p class='card-text'>";
+        text += "&nbsp;&nbsp;&nbsp;&nbsp;" + item.name;
+        text += "<br>";
+        text += "<b>Call: </b>"+ item.call +" <br>";
+        text += "<b>Email: </b>"+ item.email +" <br>";
+        text += "</p>";
+        text += "</div>";
+        text += "</div>";
+        text += "</div>";
+        document.getElementById('info').innerHTML += text;
+    });
+  </script>

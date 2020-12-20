@@ -2,12 +2,12 @@
 
 * {
   font-family: "Roboto", sans-serif;
-  font-weight: bold;
 }
 
 .navbar {
   background-color: rgb(255, 232, 232);
   box-shadow: 0px 1px 5px #be6b6b;
+  font-weight: bold;
 }
 
 .nav-link {
